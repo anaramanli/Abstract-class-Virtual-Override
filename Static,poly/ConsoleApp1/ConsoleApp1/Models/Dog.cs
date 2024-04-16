@@ -24,5 +24,10 @@ namespace ConsoleApp1.Models
         {
             Console.WriteLine("Dog swimed");
         }
+
+        public void Burry()
+        {
+            Console.WriteLine("Burring");
+        }
     }
 }
