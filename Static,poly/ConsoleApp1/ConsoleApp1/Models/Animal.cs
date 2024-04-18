@@ -14,6 +14,10 @@ namespace ConsoleApp1.Models
             Name = name;
         }
 
+        public Animal()
+        {
+            
+        }
         public abstract void Eat();
         public override string ToString()
         {

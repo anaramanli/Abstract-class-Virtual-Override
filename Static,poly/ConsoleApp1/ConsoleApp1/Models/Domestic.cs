@@ -12,6 +12,10 @@ namespace ConsoleApp1.Models
         {
         }
 
+        public Domestic()
+        {
+            
+        }
         public override void Eat()
         {
             Console.WriteLine("Being Pet");

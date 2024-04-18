@@ -84,7 +84,8 @@ namespace ConsoleApp1
 
             #endregion
 
-            Person Anar = new()
+            #region Operator Overload
+            /*Person Anar = new()
             {
                 Name = "Anar",
                 Surname = "Amanli",
@@ -104,7 +105,33 @@ namespace ConsoleApp1
             };
             var a = Mehriban1 != Mehriban;
             Console.WriteLine(a);
-            Console.WriteLine(Anar > Mehriban);
+            Console.WriteLine(Anar > Mehriban);*/
+
+
+            #endregion
+
+            Heyvan<Dog> park = new(new Dog[]
+            {
+                new Dog("Shahin"),
+                new Dog("Qartal")
+            });
+            Heyvan<Fish> park1 = new(new Fish[]
+            {
+                new Fish("Shahin"),
+                new Fish("Qartal")
+            });
+            Heyvan<int> nums = new Heyvan<int>(new int[] { 1, 2, 3, 4 });
+
+        }
+    }
+
+    class Heyvan<T> where T : Animal,ISwim,new()
+    {
+        public T[] Animals { get; private set; }
+
+        public Heyvan(T[] arr)
+        {
+            Animals = arr;
         }
     }
     class Person
@@ -133,7 +160,7 @@ namespace ConsoleApp1
 
         public static bool operator !=(Person left, Person right)
         {
-            return !(left == right );
+            return !(left == right);
 
         }
     }

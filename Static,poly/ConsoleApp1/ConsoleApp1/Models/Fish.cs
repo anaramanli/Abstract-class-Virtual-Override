@@ -14,6 +14,10 @@ namespace ConsoleApp1.Models
         {
         }
 
+        public Fish()
+        {
+            
+        }
         public override void Eat()
         {
             

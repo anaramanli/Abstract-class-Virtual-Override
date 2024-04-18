@@ -14,6 +14,10 @@ namespace ConsoleApp1.Models
         {
         }
 
+        public Dog()
+        {
+            
+        }
         public override void Eat()
         {
             Console.WriteLine("Eating bone");
